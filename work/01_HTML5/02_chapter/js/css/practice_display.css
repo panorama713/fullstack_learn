@@ -1,0 +1,13 @@
+#firstSentence {
+    display:block
+    /* 여기에 disply:none 을 주면 글자를 포함해서 공백이 되어버림 */
+    /* visibility:hidden 표시하지 않음 */
+}
+
+#secoundSentence {
+    display:block
+}
+
+#thirdSentence {
+    display:block
+}

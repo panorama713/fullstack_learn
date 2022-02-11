@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="css/04연습.css"/>
+</head>
+<body>
+    <form>
+        <fieldset><legend>입력 양식</legend>
+            <table>
+                <tr>
+                    <td><label  class="강조" for="name">이름</label></td>
+                    <td><input id="name" type="text"></label></td>
+                </tr>
+
+                <tr>
+                    <td><label for="name">이메일</label></td>
+                    <td><input id="email" type="email"></td>
+                </tr>
+
+                <tr class="강조">
+                    <td><label for="yyyymmdd">생년월일</label></td>
+                    <td><input id="yyyymmdd"type="yyyymmdd"></td>
+                    <td><select>
+                        <option>월</option>
+                        <option>1월</option>
+                        <option>2월</option>
+                    </select></td>
+                    <td><input for="dd"></label></label></td>
+                </tr>
+                <tr class="강조">
+                    <td>성별</td>
+                    <td>
+                        <input id="man" type="radio" name="gender" value="m"/>
+                        <label for="man">남자</label>
+                        <input id="woman" type="radio" name="gender" value="w"/>
+                        <label for="woman">여자</label>
+                    </td>               
+                </tr>
+            </table>
+            <input type="submit">
+        </fieldset>
+    </form>
+</body>
+</html>

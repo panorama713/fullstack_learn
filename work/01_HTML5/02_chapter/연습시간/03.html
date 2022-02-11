@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <label id="id" type="id">ID:</label>
+                <input id="id" type="id">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <label type="password" name="pass">PW:</label>
+                <input type="password" name="pass">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label id="email" type="text">Email:</label>
+                <input id="email" type="text">
+                @<select id="selbox" name="selbox">
+                    <option value="">선택</option>
+                    <option value="1">google.com</option>
+                    <option value="2">naver.com</option>
+                    <option value="3">daum.net</option>
+                    <option value="direct">직접입력</option>
+                </select>
+                <input type="text" id="selboxDitect" nave="selboxDirect"/>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label type="number" name="number">번호:</label>
+                <select>
+                    <option>010</option>
+                    <option>011</option>
+                </select>
+                <input type="number" name="number" maxlength="8" placeholder="-없이 입력해주세요">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                성별:
+                <input id="man" name="gender" type="radio">
+                <label name="gender" type="radio">남자</label>
+                <input id="woman" name="gender" type="radio">
+                <label name="gender" type="radio">여자</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>할말</td>
+        </tr>
+    </table>
+    <textarea cols="50" rows="10"></textarea><br>
+    <input type="submit">
+</body>
+</html>
