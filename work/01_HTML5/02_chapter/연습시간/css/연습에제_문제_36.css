@@ -1,0 +1,13 @@
+h1 {
+    color: red;
+    font-weight:300;
+}
+.blue {
+    color: blue;
+}
+li {
+    list-style-type: circle;
+}
+.bold {
+    font-weight: bold;
+}

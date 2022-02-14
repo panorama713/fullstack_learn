@@ -1,0 +1,15 @@
+h3 {
+    color: black;
+    text-shadow: 2px 2px 10px gray;
+}
+p {
+    color: green;
+    font-size: 18px;
+    font-family: '명조';
+    line-height: 150%;
+}
+span {
+    font-weight: bold;
+    color: blue;
+    text-decoration: underline;
+}

@@ -1,0 +1,9 @@
+div {
+    width: 100px; height: 100px;
+    background-color: magenta;
+
+    border: 205px dashed green;
+    /*       너비  스타일     색 */
+    margin: 100px;
+    padding: 30px;
+}

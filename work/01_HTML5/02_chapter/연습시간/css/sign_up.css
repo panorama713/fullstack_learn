@@ -1,0 +1,17 @@
+* {
+    margin: 0px;
+    /* 전체 크기 자동 설정 */
+    box-sizing: border-box;
+    font-size: 11px;
+}
+
+html {
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+body {
+    width: 45%;
+    border: 1px black;
+}

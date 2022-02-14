@@ -1,0 +1,4 @@
+li {
+    list-style-image: url("../img/이미지폴더/img/arrow.gif");
+    /* 리스트 스타일을 사진으로 대체 할 수 있다 */
+}
