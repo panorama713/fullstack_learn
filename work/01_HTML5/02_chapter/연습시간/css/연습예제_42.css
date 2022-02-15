@@ -1,0 +1,21 @@
+* {
+    /* *은 전체를 포함하는 것 */
+    padding: 0;
+    margin: 0;
+}
+h3 {
+    margin: 20px 0 0 20px;
+    /* 상 우 하 좌 */
+}
+ul {
+    width: 450px;
+    border: solid 1px black;
+    margin: 20px 0 0 20px;
+    padding: 20px 30px 30px 30px;
+    /* 상 우 하 좌 */
+}
+li {
+    list-style-type: none;
+    padding: 10px 0 10px 0;
+    border-bottom: dotted 1px gray;
+}
