@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>브라우저 새 창 열기</h1>
+    <button onclick="openWindow()">새로운 창 열기</button>
+    <button onclick="closeWindow()">새로운 창 닫기</button>
+
+    <script>
+        let newWindowObj;
+        let flag = "yes";
+        // ``의 장점, ${}로 변수를 넣을 수 있음, 백틱 안에서 연산도 가능함
+        // 변수 strWindowFeatures를 통해 새롭게 여는 웹 브라우저 창의
+        // 옵션들을 일일이 설정할 수 있음
+        let strWindowFeatures = `menubar = ${flag}, location = ${flag},resizable = ${flag}" + "scrollbars = ${flag},status = ${flag}`;
+        function openWindow(){
+            newWindowObj = window.open("http://www.naver.com","Naver사이트", strWindowFeatures);
+        } 
+
+        function closeNewWindow(){
+            newWindowObj.close();
+        }
+    </script>
+    <h1>현재 문서의 URL 주소</h1>
+    <script>
+        document.write("현재 문서의 URL 주소는"+ location.href + "입니다");
+    </script>
+
+    <h1>현재 창에 문서 불러오기</h1>
+    <p>아래 버튼을 눌러 새로운 문서를 연 후에 브라우저의 뒤로 가기 버튼을 눌러보세요</p>
+    <button onclick="openDocument()">새로운 문서 열기</button>
+    <button onclick="opendocumentWithReplace()">이전 문서 삭제 후 새로운 문서 열기</button>
+    <script>
+        function openDocument(){
+            location.assign("http://naver.com");
+        }
+        function opendocumentWithReplace(){
+            location.replace("http://google.com");
+        }
+    </script>
+
+    <!-- 대화상자 -->
+    <h1>alert() 메소드</h1>
+    <button onclick="alertDialogBox()">alert 대화상자</button>
+    <p id="text"></p>
+
+    <script>
+        function alertDialogBox(){
+            let str;
+            
+            if(confirm("확인이나 취소를 눌러주세요!")==true){
+                str = "당신은 확인을 눌렀습니다!";
+            }else{
+                str = "당신은 취소를 눌렀습니다!";
+            }
+            document.getElementById("text").innerHTML = str;
+        }
+    </script>
+
+    <!-- setTimeout 지연함수 호출 -->
+
+    <h1>setTimeout() 메소드</h1>
+    <button onclick="startTimeout()">2초 뒤에 현재 시간을 표시합니다</button>
+    <p id="date"></p>
+
+    <script>
+        function startTimeout(){
+            setTimeout(printCurrentDate, 2000);
+        }
+        function printCurrentDate(){
+            document.getElementById("date").innerHTML = new Date;
+        }
+    </script>
+
+    <!-- clearInterval -->
+
+    <h1>clearTimeout() 메소드</h1>
+    <button onclick="startInterval()">2초 뒤에 현재 시간을 표시합니다</button>
+    <button onclick="cancelintervla()">시간 갱신 중지!</button>
+    <p id="date2"></p>
+
+    <script>
+        let timeoutId;
+        function startInterval(){
+            timeoutId = setTimeout(printCurrentDate, 1000);
+        }
+        function cancelintervla(){
+            clearInterval(timeoutId);
+        }
+        function printCurrentDate(){
+            document.getElementById("date2").innerHTML += new Date() + "<br>"
+        }
+    </script>
+</body>
+</html>

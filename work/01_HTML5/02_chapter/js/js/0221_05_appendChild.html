@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>appendChild() 메소드</h1>
+    <h2 id="item">JavaScript</h2>
+    <div id="list">
+        <p>HTML</p>
+        <p id="criteria">CSS</p>
+        <p>JQuery</p>
+    </div>
+    <button onclick="appendNode()">노드 추가!</button>
+
+    <script>
+        function appendNode(){
+            console.log('elements')
+            let parent = document.getElementById("list");
+            let newItem = document.getElementById("item");
+
+            let criteriaitem = document.getElementById("criteria");
+            parent.insertBefore(newItem, criteriaitem);
+
+
+        //     //위의 부모를 카피해서 리스트에 추가하겠다.
+        //     parent.appendChild(newItem);
+        }
+
+
+    </script>
+</body>
+</html>

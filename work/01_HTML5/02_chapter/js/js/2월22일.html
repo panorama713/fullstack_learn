@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="intro">
+        <p>Hello</p>
+        <p>JavaScript</p>
+        <p>world</p>
+        <p>!!!</p>
+    </div>
+    <p id="demo"></p>
+    <button type="button" name="button" onclick="btnFunc();">버튼클릭</button>
+
+    <script>
+        function btnFunc(){
+            // childNode : 줄바꿈, 주석, 텍스트노드, 태그(요소) 모두 포함
+            let myPage = document.getElementById('intro').childNodes;
+
+        for(let i of myPage){
+            document.getElementById('demo').innerHTML += i.innerHTML;
+        }
+
+        document.getElementById('demo').innerHTML = "<br>== children == <br>";
+
+        let myPage2 = document.getElementById('intro').children;
+
+        for(let i of myPage2){
+            document.getElementById('demo').innerHTML += i.innerHTML;
+        }
+    }
+    </script>
+</body>
+</html>

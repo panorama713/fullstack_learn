@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            width: 400px;
+            margin: 50px auto;
+            text-align: center;
+        }
+        #rect {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #222;
+            margin: 30px auto;
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <!-- <img src="../img/cup-1.png" id="cup">
+    <div id="container"></div>
+    
+    <script>
+        let cup = document.querySelector("#cup");
+        cup.onclick = function(event){
+            document.querySelector('#container').innerHTML = ("이벤트유형: " + event.type + ", 이벤트 위치: " + event.pageX + ", " + event.pageY + "<br>");
+        }
+    </script>
+
+    <p>문서를 열면 팝업 창이 표시됩니다</p>
+    <div class="popup" id="notice">
+        <h1>공지사항</h1>
+        <ul>
+            <li>공지사항 내용1</li>
+            <li>공지사항 내용2</li>
+            <li>공지사항 내용3</li>
+            <li>공지사항 내용4</li>
+            <li>공지사항 내용5</li>
+        </ul>
+        <button>닫기</button>
+    </div>
+    <script>
+        let closeBtn = document.querySelector(".popup > button");
+        // 이벤트가 무엇이 일어났는지 계속 감시, 이벤트가 일어나면 실행함
+        closeBtn.addEventListener('click', function(){
+            document.querySelector('.popup').style.display = 'none';
+        });
+    </script> -->
+
+    <div id="container">
+        <p>도형 위로 마우스 포인터를 올려놓으세요</p>
+        <div id="rect"></div>
+    </div>
+
+    <script>
+        let myRect = document.querySelector('#rect');
+        myRect.addEventListener("mouseover", function(){
+            myRect.style.backgroundColor = "green";
+            myRect.style.borderRadius = "50%";
+        })
+        myRect.addEventListener("mouseout", function(){
+            myRect.style.backgroundColor = "";
+            myRect.style.borderRadius = "";
+        })
+    </script>
+</body>
+</html>

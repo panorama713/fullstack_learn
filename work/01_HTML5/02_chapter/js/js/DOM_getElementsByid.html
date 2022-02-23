@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function light_on(){
+            document.getElementById('image').src = "../img/light_on.png";
+        }
+
+        function light_off(){
+            document.getElementById('image').src = "../img/light_off.png";
+        }
+
+        function 가위(){
+            document.getElementById('math_img').src = "../img/math_img_1.jpg";
+        }
+        function 바위(){
+            document.getElementById('math_img').src = "../img/math_img_2.jpg";
+        }
+        function 보(){
+            document.getElementById('math_img').src = "../img/math_img_3.jpg";
+        }
+    </script>
+</head>
+<body>
+    <button onclick="light_on()">켜기</button>
+    <button onclick="light_off()">끄기</button>
+
+    <img id="image" src="../img/light_on.png">
+
+    <button onclick="가위()">가위</button>
+    <button onclick="바위()">바위</button>
+    <button onclick="보()">보</button>
+
+    <img id="math_img" src="../img/math_img_1.jpg">
+
+    
+</body>
+</html>

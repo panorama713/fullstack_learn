@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="2월_21일.js"></script>
+    <title>JavaScript DOM ELement</title>
+    <script>
+        // window.onload = function(){
+        //     let output = '';
+        //     for(let i = 0; i < 256; i++){
+        //         output += '<div></div>';
+        //     }
+        //     // body 부분에 output을 넣겠음
+        //     document.body.innerHTML = output;
+
+        //     // 문서 객체를 선택합니다(querySelectorAll 선택한 모든 객체를 변경)
+        //     let divs = document.querySelectorAll('div');
+        //     for(let i = 0; i < divs.length;i++){
+        //         // 변수를 적용합니다
+        //         let div = divs[i];
+
+        //         // 스타일을 적용합니다
+        //         div.style.height = '20px';
+        //         div.style.background = 'rgb(' + i + ',' + i + ',' + i + ')';
+        //     }
+        // };
+
+        // window.onload = function(){
+        //     let image = document.getElementById('image');
+
+        //     image.src = 'http://placehold.it/300x200';
+        //     image.width = 300;
+        //     image.height = 200;
+        // };
+
+        // window.onload = function(){
+        //     document.body.setAttribute('data-custom', 'value');
+
+        //     let dataCustom = document.body.getAttribute('data-custom');
+        //     alert(dataCustom);
+        // };
+
+        window.onload = function(){
+            let clock = document.getElementById('clock');
+            setInterval(function(){
+                let now = new Date();
+                clock.innerHTML = now.toString();
+            }, 1000);
+        };
+    </script>
+    
+</head>
+<body>
+    <!-- <h1>innerHTML을 이용한 요소의 내용 변경</h1>
+    <p id="text">이 문장을 바꿀 것 입니다!</p> -->
+<!-- 
+    <h1>객체 집합을 이용한 선택</h1> -->
+
+    <!-- <h1>속성 이름을 이용한 속성값 변경</h1>
+    <a id="link" href="http://tcpschool.com/html/intro">HTML 수업 바로가기!</a><br>
+    <button onclick="changeLink()">자바스크립트 수업으로 바꾸기!</button> -->
+
+    <!-- <h1>DOM 요소의 스타일 변경</h1>
+    <p id="text">이 문서들의 기본색은 검정입니다</p>
+    <button onclick="changeRedColor()">빨간색 글자</button>
+    <button onclick="changeBlackColor()">검정색 글자</button> -->
+
+    <!-- 책 예시 p.342 ~  -->
+    <!-- <h1>header</h1>
+    <h1>header</h1>
+    <h1>header</h1>
+
+    <img id="image"> -->
+
+    <h1 id="clock"></h1>
+    
+</body>
+</html>
