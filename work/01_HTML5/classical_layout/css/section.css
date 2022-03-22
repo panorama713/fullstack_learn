@@ -1,0 +1,44 @@
+#content {
+    background-color: lightblue;
+    font-size: small;
+    height: 300px;
+    margin-left: 20px;
+}
+.article-header {
+    font-size: large;
+}
+.article-body {
+    font-size: 10px;
+    margin-left: 10px;
+}
+.article-body img {
+    float: left;
+    height: 110px;
+    margin: 5px 10px;
+}
+
+#main-section {
+    background-color: tomato;
+    float: left;
+    width: 650px;
+}
+
+#main-aside {
+    background-color: lightpink;
+    width: 230px;
+    float: right;
+}
+.aside-list {
+    margin-bottom: 5px;
+    font-size: x-small;
+}
+.aside-list-item {
+    margin: 5px;
+}
+#main-footer {
+    font-size: x-small;
+    margin: 20px;
+}
+#clear-float {
+    clear: both;
+}

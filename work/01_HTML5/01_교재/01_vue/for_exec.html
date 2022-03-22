@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .strong {
+            color:red;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="doAdd" v-bind:disabled="isClick">몬스터 추가하기</button>
+        <!-- 아래 데이터를 목록으로 출력
+            마지막 데이터는 hp > 300 이상이면 "강하다" -->
+            <ul>
+                <li v-for="i in list" v-bind:class="{ strong: i.hp > 300 }">{{ i.id }} / {{ i.name }} / {{ i.hp }} / 
+                    <sapn v-if="i.hp >= 300">강하다</sapn>
+                </li>
+            </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data:{
+                // 객체 배열
+                // id : 1, name: "슬라임", hp: 100
+                // id : 2, name: "고블린", hp: 200
+                // id : 3, name: "드래곤", hp: 500
+                // id : 4, name: "골드드래곤", hp: 1000
+                list: [
+                    { id : 1, name: "슬라임", hp: 100 },
+                    { id : 2, name: "고블린", hp: 200 },
+                    { id : 3, name: "드래곤", hp: 500 }
+                ],
+                isClick: false
+            },
+            methods: {
+                doAdd(){
+                    this.list.push({ id : 4, name: "골드드래곤", hp: 1000 })
+                    this.isClick = true;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

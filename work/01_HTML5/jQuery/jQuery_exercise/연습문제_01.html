@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0"></script>
+    <style>
+        .yellow {
+            background-color: yellow;
+        };
+    </style>
+    <script src="js/jquery-3.6.0"></script>
+    <script>
+        // $(function(){
+        //     $('#btn').click(function(){
+        //         $('h2').addClass('yellow');
+        //     })
+        // });
+        // $(() =>{
+        //     $("#btn").click(() => {
+        //         $('h2').addClass('yellow');
+        //     })
+        // })
+    </script>
+
+    <!-- <script>
+        $(function(){
+            $('*').css('border', '1px solid blue')
+        });
+    </script> -->
+
+    <!-- <script>
+        $(function(){
+            $('p').css('background-color', 'yellow');
+            // $('p').attr('style', 'background-color:yellow');
+        });
+    </script> -->
+    <!-- <script>
+        $(function(){
+            $('#title').css('border', 'solid 5px skyblue');
+            $('#title').css('padding', '10px');
+        });
+    </script> -->
+
+    <!-- <script>
+        $(function(){
+            $('.red').css('color', 'red');
+            $('.red').css('font-weight', 'bold');
+
+            $(".red").css({"color":"red", "font-weight":"bold"}); // 한줄에 여러가지 가능
+        });
+       
+    </script> -->
+
+    <!-- <script>
+        $(function(){
+            $('h2, span, div').css('text-decoration','underline');
+        });
+    </script> -->
+</head>
+<body>
+    <!-- 연습문제 1 -->
+    <!-- jQuery를 이용해서 버튼을 클릭하면 -->
+    <!-- h2태그의 백그라운드 컬러 색상을 노란색으로 설정해 주세요 -->
+    <h2>제목 1</h2>
+    <h2>제목 2</h2>
+    <button id="btn">CSS 설정하기</button>
+
+    <!-- 연습문제 2 -->
+    <!-- jQuery를 이용해서 버튼을 클릭하면 -->
+    <!-- 페이지 전체에 border 1px solid blue 만들어주세요 -->
+    <h2>전체 선택자</h2>
+    <p>전체 선택자 *는 페이지의 모든 요소를 선택한다</p>
+    <ul>
+        <li>항목 1</li>
+        <li>항목 2</li>
+    </ul>
+
+    <!-- 연습문제 3 -->
+    <!-- p를 선택해서 백그라운드 속성을 노란색으로 만들어주세요  -->
+
+    <h2>태그 선택자</h2>
+    <p>태그 선택자는 페이지의 해당 요소를 선택한다</p>
+    <p>태그 선택자는 다른 말로 요소 선택자라고 한다</p>
+    <ul>
+        <li>항목 1</li>
+        <li>항목 2</li>
+    </ul>
+
+    <!-- 연습문제 4 -->
+    <!-- title을 선택해서 border -> solid 5px skyblue 만들어 주세요 -->
+    <!-- title을 선택해서 padding -> 10px 만들어 주세요 -->
+    <h2 id="title">아이디 선택자</h2>
+    <p>아이디 선택자는 요소의 id 속성 값으로 해당 요소를 선택한다</p>
+    <ul>
+        <li>항목 1</li>
+        <li>항목 2</li>
+    </ul>
+
+    <!-- 연습문제 5 -->
+    <!-- 클래스 red 선택후 color -> red -->
+    <!-- 클래스 red 선택후 font-weight -> bold -->
+    <h2 >클래스 선택자</h2>
+    <p>아이디 선택자는 요소의 <span class="red">class 속성 값 </span> 으로 해당 요소를 선택한다</p>
+    <ul>
+        <li>항목 1</li>
+        <li class="red">항목 2</li>
+        <li>항목 3</li>
+        <li class="red">항목 4</li>
+    </ul>
+
+
+    <!-- 연습문제 6 -->
+    <!-- 그룹선택자 h2, span, div 3개를 동시에 선택해서  -->
+    <!-- text-decoration -> underline 을 추가 -->
+    <h2>그룹 선택자</h2>
+    <p>그룹 선택자는 요소의 <span>여러 요소를 동시에 선택</span>한다.</p>
+    <div>박스 1</div>
+    <div>박스 2</div>
+    <ul>
+        <li>항목 1</li>
+        <li>항목 2</li>
+    </ul>
+</body>
+</html>

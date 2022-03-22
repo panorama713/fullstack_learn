@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0"></script>
+    <script>
+        $(document).ready(function() {
+            $('#btn1').click(function(){
+                let content = $('#box').text(); // innerText
+                alert(content);
+            })
+            $('#btn2').click(function(){
+                let content02 = $('#box').html(); // innerHTML
+                alert(content02);
+            })
+            
+        });
+    </script>
+</head>
+<body>
+    <div id="box">
+        <h3>요소 내용 가져오기</h3>
+        <p>text는 요소의 텍스트만 가져오고, html()는 태그도 가져옵니다</p>
+    </div>
+    <button id="btn1">텍스트 가져오기</button>
+    <button id="btn2">HTML 가져오기</button>
+</body>
+</html>

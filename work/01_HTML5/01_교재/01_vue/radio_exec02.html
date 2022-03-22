@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- radio button > 빨강, 파랑 선택 > 그 색으로 변경 -->
+    <div id="app">
+        <label>
+            <input type="radio" value="red" v-model="myColor" name="color">빨강</input>
+            <input type="radio" value="blue" v-model="myColor" name="color">파랑</input>
+        </label>
+        <p v-bind:style="{ color: myColor }">선택한 색상은 {{ myColor }} 입니다.</p>
+    </div>
+    
+
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                myColor: "red"
+            }
+        })
+    </script>
+</body>
+</html>

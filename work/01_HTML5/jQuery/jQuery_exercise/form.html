@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(function(){
+            $(":text, :password").css("border", "1px solid pink");
+            $(":button").css({"backgroundColor": "yellow", "border": "1px solid black"});
+            $(":submit, :reset").css({"backgroundColor": "pink", "border": "1px solid blue"});
+            $(":radio, checkbox").wrap("<span style='background-color:yellow'></span>"); // wrap 겉을 싸는것
+            $("input:checked").wrap("<span style='background-color:red'></span>");
+            $("option:selected").css("backgroundColor", "red");
+        })
+    </script>
+</head>
+<body>
+    <h2>회원 가입 양식</h2>
+    <form>
+        <ul>
+            <li>
+                아이디 : <input type="text">
+                <input type="button" value="아이디 중복 체크">
+            </li>
+            <li>
+                이름 : <input type="text">
+            </li>
+            <li>
+                비밀번호 : <input type="password">
+            </li>
+            <li>
+                이메일 : <input type="mail">@
+                <select>
+                    <option value="naver">naver.com</option>
+                    <option value="google">google.com</option>
+                    <option value="daum">daum.net</option>
+                </select>
+            </li>
+            <li>
+                성별 : <input type="radio" name="gender">
+                남성<input type="radio" name="gender"checked>여성
+            </li>
+            <li>
+                가입경로 : <input type="checkbox" name="h1" checked>인터넷
+                <input type="checkbox" name="h2">친구
+                <input type="checkbox" name="h3" checked>기타
+            </li>
+        </ul>
+        <div>
+            <input type="submit" value="제출하기">
+            <input type="reset" value="입력취소">
+        </div>
+    </form>
+</body>
+</html>

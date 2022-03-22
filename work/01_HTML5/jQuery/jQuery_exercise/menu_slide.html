@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(function(){
+            // $('.accordion > dd').hide();
+
+            let allPanels = $('.accordion > dd');
+            allPanels.hide()
+
+            $('.accordion > dt > a').click(function(){
+                allPanels.slideUp();
+                $(this).parent().next().slideDown();
+            });
+        });
+    </script>
+    <style>
+        a {
+            text-decoration: none;
+        }
+        .accordion {
+            margin: 30px;
+        }
+        .accordion dt, .accordion dd {
+            padding: 10px;
+            border: 1px solid #cccccc;
+        }
+        .accordion dt:last-of-type, .accordion dd:last-of-type {
+            border-bottom: 1px solid #cccccc;
+        }
+        .accordion dt a, .accordion dd a {
+            display: block;
+            color: black;
+            font-weight: bold;
+        }
+        .accordion dd {
+            border-top: 0px;
+            font-size: 14px;
+            line-height: 150%;
+        }
+    </style>
+</head>
+<body>
+    <dl class="accordion">
+        <dt>
+            <a href="#">웹이란?</a>
+        </dt>
+        <dd>웹은 'World Wide Web'의 약자로서 간단하게 WWW로 표현된다.
+            웹이란 인터넷에 연결된 컴퓨터를 통해 전세계 사람들이 정보를 제공하고 공유할 수 있는 사이버 공간이다.
+        </dd>
+        <dt>
+            <a href="#">웹 브라우저</a>
+        </dt>
+        <dd>웹은 'World Wide Web'의 약자로서 간단하게 WWW로 표현된다.
+            웹이란 인터넷에 연결된 컴퓨터를 통해 전세계 사람들이 정보를 제공하고 공유할 수 있는 사이버 공간이다.
+        </dd>
+        <dt>
+            <a href="#">웹 호스팅</a>
+        </dt>
+        <dd>웹은 'World Wide Web'의 약자로서 간단하게 WWW로 표현된다.
+            웹이란 인터넷에 연결된 컴퓨터를 통해 전세계 사람들이 정보를 제공하고 공유할 수 있는 사이버 공간이다.
+        </dd>
+    </dl>
+</body>
+</html>

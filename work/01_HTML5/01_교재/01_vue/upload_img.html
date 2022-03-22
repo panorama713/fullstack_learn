@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- Vue -->
+    <div id="app">
+        <input type="file" v-on:change="handleChange">
+        <div v-if="preview"><img v-bind:src="preview"></div>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data() {
+                return {
+                    preview: ""
+                }
+            },
+            methods: {
+                // 클릭같은 이벤트에 펑션 이벤트를 넣어주면 클릭하는 대상을 선택
+                handleChange: function(event) { 
+                    // 선택할 파일 : files[0]
+                    let file = event.target.files[0];
+
+                    // file을 실제로 선택하고
+                    // 파일의 확장자가 png or jpg, jpeg
+                    if(file && file.type.match(/^image\/(png|jpeg|jpg)$/)){
+                        // 매개변수 : 선택한 파일이 메모리에서 저장된 주소
+                        this.preview = window.URL.createObjectURL(file);
+
+                        // 파일을 사용후 메모리에서 해제하는 부분
+                        this.preview.onload = () => {
+                            // 메모리 해제
+                            window.URL.revokeObjectURL(this.preview)
+                        }
+                    }
+                }
+            },
+        })
+    </script>
+</body>
+</html>

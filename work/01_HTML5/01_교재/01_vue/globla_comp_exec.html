@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .header {
+            color: black;
+            text-align: center;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- header compornent -->
+        <my-Header></my-Header>
+        <!-- body compornent -->
+        <my-body></my-body>
+        <!-- footer compornent -->
+        <my-footer></my-footer>
+    </div>
+    <script>
+        // Vue
+        // component 정의
+        Vue.component("my-component", {
+            template: `<div>component</div>`
+        });
+
+        // header component
+        Vue.component("my-header", {
+            template: 
+            /*html*/
+            `
+            <div class="header">
+                <p><h4>저의 블로그에 오신것을 d 환영합니다.</h4><p>
+            </div>
+            `
+        });
+        // body component
+        Vue.component("my-body", {
+            template: "<div>body</div>"
+        });
+        // footer component
+        Vue.component("my-footer", {
+            template: "<div>footer</div>"
+        });
+        // Vue 생성
+        new Vue ({
+            el: `#app`
+        })
+    </script>
+</body>
+</html>

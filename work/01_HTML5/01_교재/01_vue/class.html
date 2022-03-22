@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .strike_through{
+            text-decoration: line-through;
+            color: lightgray;
+        }
+        .dark{
+            background-color: gray;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p class="strike_through">직접 클래스 지정</p>
+        <p v-bind:class="myClass">v-bind 클래스 지정</p>
+        <p v-bind:class="[ myClass, darkClass ]">v-bind 복수의 클래스 지정</p>
+        <p v-bind:class="{ 'strike_through': isON }">데이터로 클래스 ON/OFF</p>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data:{
+                myClass: "strike_through",
+                darkClass: "dark",
+                isON: true
+            }
+        })
+    </script>
+</body>
+</html>

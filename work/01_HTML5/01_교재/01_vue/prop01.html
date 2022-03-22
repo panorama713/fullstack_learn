@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app_comp">
+        <h1>Vue.js - 컴포넌트 기본 실습</h1>
+        <ol>
+            <todo-item
+                v-for="item in grocryList"
+                v-bind:todo="item"
+                v-bind:key="item.id"></todo-item>
+        </ol>
+    </div>
+
+    <script>
+        // 전역 component
+        Vue.component("todo-item", {
+            props:['todo'],
+            template: "<li>{{ todo.text }}</li>"
+        });
+
+        // 최상위 부모 component
+        let app_comp = new Vue({
+            el: "#app_comp",
+            data: {
+                grocryList: [
+                    { id:0, text: "삼겹살" },
+                    { id:1, text: "돼지갈비" },
+                    { id:2, text: "오리호박찜" },
+                    { id:3, text: "뚝배기불고기" },
+                ]
+            }
+        });
+    </script>
+</body>
+</html>

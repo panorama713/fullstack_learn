@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/trans.css">
+    <!-- Vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- Lodash cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <p>
+            <button @click="doshuffle">셔플</button>
+            <!-- 버튼 추가 -->
+            <button @click="doAdd">추가</button>
+        </p>
+        <!-- 삭제버튼 -->
+        <transition-group tag="ul" class="list">
+            <li v-for="(item, index) in list" :key="item" class="item" 
+            @click="doRemove(index)">{{ item }}</li>
+        </transition-group>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data() {
+                return {
+                    list: [1,2,3,4,5,6,7,8,9,10]
+                }
+            },
+            methods: {
+                doshuffle: function() {
+                    this.list = _.shuffle(this.list)
+                },
+                // 목록을 클릭하면 삭제되는 함수
+                doRemove:function(index) { 
+                    this.list.splice(index, 1)
+                },
+                // 목록을 추가하는 함수
+                // 목록의 가장 큰수를 찾아서 그것보다 1을 더해서 추가
+                doAdd: function() {
+                    // Math.max는 배열을 불러오지 못함
+                    // ...으로 배열을 풀어주고 할 수 있음
+                    let num = Math.max(...this.list); 
+                    // push를 이용
+                    // this.list.push(num + 1)  
+
+                    let index = Math.floor(Math.random() * (this.list.length))
+                    
+                    // splice를 이용
+                    // splice(길이, 삭제할 위치, 추가할 위치)
+                    this.list.splice(index, 0, num + 1) 
+                }
+            },
+        })
+    </script>
+    <style>
+        /* 이동 트렌지션 */
+        .v-move {
+            transition: 0.5s;
+        }
+    </style>
+</body>
+</html>

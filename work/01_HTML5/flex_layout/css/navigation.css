@@ -1,0 +1,41 @@
+
+.pull-left {
+    /* 마진이 왼쪽으로 가고 나머지 컨텐츠 들이 오른쪽으로 다 밀려버림 */
+    margin-left: auto;
+}
+
+#main-navigation {
+    display: flex;
+    justify-content: flex-start;
+}
+.outer-menu {
+    display: flex;
+    justify-content: flex-start;
+    width: 630px;
+    font-size: 15px;
+}
+.outer-menu a:hover {
+    background-color: black;
+    color: white;
+    padding: 0px 10px;
+}
+.outer-menu a {
+    padding: 0px 10px;
+}
+.search-bar {
+    width: 270px;
+    height: 26px;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.input-search {
+    width: 100px;
+    height: 15px;
+}
+.input-search-submit {
+    margin: 0px 2px;
+    height: 15px;
+    font-size: 20px;
+}

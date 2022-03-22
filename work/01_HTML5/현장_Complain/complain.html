@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/navigation.css">
     <link rel="stylesheet" href="css/section.css">
+    <link rel="stylesheet" href="css/complain.css">
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/commons.js"></script>
     <script src="js/time.js"></script>
+    <script src="js/complain.js_check.js"></script>
+
 </head>
 <body>
     <div id="page-wrapper">
@@ -61,17 +64,17 @@
                     <!-- 고객 complain -->
                     <div class="article-header">
                         <h1 class="article-title">고객 Complain</h1>
-                        <p class="article-date">현재시각:<span id="displayNow"></span></p>
+                        <p class="article-date">현재시각:<span id="current"></span></p>
                     </div>
                     <div class="article-body">
-                        <table>
+                        <table id="tableComplain">
                             <tr>
                                 <th>No</th>
                                 <th>제목</th>
                                 <th>Complain 내용</th>
                                 <th>대상<br>페이지</th>
                                 <th>작성자</th>
-                                <th>완료<br>여부</th>
+                                <th><input type="checkbox" id="chkAll" onclick="checkAll()"> 완료</th>
                             </tr>
                             <tr>
                                 <td>1</td>
@@ -102,7 +105,7 @@
                                 </td>
                                 <td>컵 소개 메뉴</td>
                                 <td>홍길동</td>
-                                <td>미완료</td>
+                                <td>완료</td>
                             </tr>
                             <tr>
                                 <td>4</td>
@@ -113,7 +116,7 @@
                                 </td>
                                 <td>Complain메뉴</td>
                                 <td>홍길동</td>
-                                <td>미완료</td>
+                                <td>완료</td>
                             </tr>
                             <tr>
                                 <td>5</td>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer>
+        // 연습문제 30
+        // 세 정수가 입력된다.
+        // 낮은 숫자부터 출력한다.
+        // 입력 예시 : 8 7 6
+        // 출력 예시 : 6 7 8
+
+        let inp = prompt("숫자 3개를 입력하세요").split(" ").map(Number)
+
+        let result = inp.sort((x,y) => x-y);
+        // arr.sort();
+        document.write(result);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

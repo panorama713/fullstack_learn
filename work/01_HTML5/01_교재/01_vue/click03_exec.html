@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <h2>클릭하면 지정된 값만큼 증가시키는 예제</h2>
+    <div id="app">
+        <!-- 카운트 수를 표시 -->
+        <p>{{ num }}</p>
+        <!-- 클릭하면 3 증가 -->
+        <button @click="add(3)">3증가</button>
+        <!-- 클릭하면 10 증가 -->
+        <button @click="add2">10증가</button>
+        <!-- 클릭하면 100 증가 -->
+        <button @click="add(100)">100증가</button>
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data:{
+                num: 0,
+            },
+            methods: {
+                add: function(value) {
+                    this.num += value
+                },
+                add2: function() {
+                    this.num += 10
+                }
+            }
+        })
+    </script>
+</body>
+</html>

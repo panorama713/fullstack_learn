@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        li {
+            width: 200px;
+        }
+    </style>
+    <script src="js/jquery-3.6.0"></script>
+    <script>
+        $(function(){
+            $("div li:first").css("border", "solid 2px red");
+            $("div li:last").css("border", "solid 2px blue");
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <h2>:first/ :last 필터</h2>
+        <ul>
+            <li>항목 1</li>
+            <li>항목 1</li>
+            <li>항목 1</li>
+            <li>항목 1</li>
+            <li>항목 1</li>
+        </ul>
+    </div>
+</body>
+</html>

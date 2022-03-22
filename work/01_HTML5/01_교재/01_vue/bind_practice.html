@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            background-color: greenyellow;
+        }
+        p {
+            background-color: lightsalmon;
+            width: 300px;
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <!-- Vue -->
+    <div id="app">
+        <!-- naver 연결 -->
+        <a v-bind:href="myURL">네이버 연결</a>
+        <!-- 이미지 표시 -->
+        <p><img v-bind:src="myImg">이미지</p>
+        <!-- text 왼쪽정렬 -->
+        <p v-bind:align="myAlign">죄측 정렬하기</p>
+        <!-- text 가운대정렬 -->
+        <p v-bind:align="myAlign2">가운대 정렬하기</p>
+        <!-- text 오른쪽정렬 -->
+        <p v-bind:align="myAlign3">우측 정렬하기</p>
+        <!-- color: "red"(v-bind) -->
+        <P v-bind:style="{ color: myColor }">색 변경</P>
+    </div>
+
+    <script>
+        new Vue({
+            el: "#app",
+            data:{
+                myURL: "https://www.naver.com",
+                myImg: "img/boy.png",
+                myAlign: "left",
+                myAlign2: "center",
+                myAlign3: "right",
+                myColor: "red"
+            }
+        })
+    </script>
+</body>
+</html>

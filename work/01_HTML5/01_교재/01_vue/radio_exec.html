@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+    <h2>이미지 출력을 라디오버튼으로 변경하는 예제</h2>
+    <div id="app">
+        <label><input type="radio" value="img/boy.png" name="img" v-model="picker">
+        선택1</label>
+        <br>
+        <label><input type="radio" value="img/girl.png" name="img" v-model="picker">
+        선택2</label>
+        <br>
+        <!-- img src v-bind 변수로 넣어서 라디오버튼을 클릭할때마다 -->
+        <!-- 이미지가 화면에 바꾸어서 보여주세요 -->
+        <img v-bind:src="picker">
+    </div>
+    <script>
+        new Vue({
+            el: "#app",
+            data: {
+                picker: "img/boy.png"
+            }
+        })
+    </script>
+</body>
+</html>

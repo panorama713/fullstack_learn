@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            width: 400px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(function() {
+            $("h1").hover(function() {
+                $(this).css({
+                    background: 'red',
+                    color: 'white'
+                });
+            }, function(){
+                $(this).css({
+                    background:"",
+                    color: ''
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>여기에 마우스를 올려보세요</h1>
+</body>
+</html>

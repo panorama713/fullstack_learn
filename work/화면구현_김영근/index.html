@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Younggeun Kim</title>
+    <link rel="stylesheet" href="css/commons.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/section.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/commons.js"></script>
+    <script src="js/current_time.js"></script>
+    <script src="js/table_even.js"></script>
+</head>
+<body>
+    <div id="page-wrapper">
+        <header id="main-header">
+            <hgroup>
+                <img id="main-img"src="images/tree-cut.jpg"alt="main-img">
+                <h1 class="master-title">사진찍는 Java 개발자</h1>
+                <h2 class="master-description">김영근 이것저것 사이트</h2>
+            </hgroup>
+        </header>
+        <!-- 메뉴부분 -->
+        <nav id="main-navigation">
+            <div class="pull-left">
+                <ul class="outer-menu">
+                    <!-- 대메뉴 : 첫번째 About 메뉴 -->
+                    <li class="outer-menu-item">
+                        <span class="menu-title">메인메뉴</span>
+                        <ul class="inner-menu">
+                            <!-- About - Home 소메뉴 -->
+                            <li class="inner-menu-item"><a href="index.html">Home</a></li>
+                            <!-- 회원가입 소메뉴 -->
+                            <li class="inner-menu-item"><a href="register_member.html">회원가입</a></li>
+                            <!-- Complain 소메뉴 -->
+                            <li class="inner-menu-item"><a href="complain.html">Complain</a></li>
+                            
+                        </ul>
+                    <li class="outer-menu-item">
+                        <span class="menu-title">데이터</span>
+                        <ul class="inner-menu">
+                            <!-- 데이터 소메뉴 -->
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                            <!-- 데이터 소메뉴 -->
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                            <!-- 데이터 소메뉴 -->
+                            <li class="inner-menu-item"><a href="#">데이터</a></li>
+                            
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- 검색엔진 -->
+            <div class="pull-right">
+                <div class="search-bar">
+                    <form>
+                        <!-- 검색인풋박스 -->
+                        <input type="text" class="input-search" />
+                        <!-- 검색버튼 -->
+                        <input type="submit" class="input-search-submit" value="검색" />
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- 본문 -->
+        <div id="content">
+            <section id="main-section">
+                <!-- 본문 상세 첫번째 -->
+                <article>
+                    <!-- 본문 제목 -->
+                    <div class="article-header">
+                        <h1 class="article-title">Java 개발자를 배우는 회원</h1>
+                        <p class="article-date">2022년 3월 3일</p>
+                        현재시각: <span id="current-time"></span>
+                    </div>
+                    <!-- 본문 내용 -->
+                    <div class="article-body">
+                        <table id="article-table" border>
+                            <tr>
+                                <th>순번</th>
+                                <th>이름</th>
+                                <th>id</th>
+                                <th>전화번호</th>
+                                <th>이메일</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>stive</td>
+                                <td>stc57</td>
+                                <td>010-0000-0001</td>
+                                <td>stc57@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>alan</td>
+                                <td>alan3333</td>
+                                <td>010-0000-0002</td>
+                                <td>alan3333@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>david</td>
+                                <td>give32</td>
+                                <td>010-0000-0003</td>
+                                <td>give32@gmail.com</td>
+                            </tr>
+                        </table>
+                    </div>
+                </article>
+                <!-- 본문 상세 두번째 -->
+                <article>
+                    <!-- 본문 제목 -->
+                    <div class="article-header">
+                        <h1 class="article-title">회원의 취미</h1>
+                    </div>
+                    <!-- 본문 내용 -->
+                    <div class="article-body">
+                        <h2>stive</h2>
+                        <ul>
+                            <li>사진촬영</li>
+                            <li>앱 개발</li>
+                            <li>게임</li>
+                        </ul>
+                        <h2>alan</h2>
+                        <ul>
+                            <li>테니스</li>
+                            <li>앱 개발</li>
+                            <li>게임</li>
+                        </ul>
+                        <h2>david</h2>
+                        <ul>
+                            <li>낚시</li>
+                            <li>수영</li>
+                            <li>게임</li>
+                        </ul>
+                    </div>
+                </article>
+                <article>
+                    <!-- 본문 제목 -->
+                    <div class="article-header">
+                        <h1 class="article-title">나의 사진</h1>
+                    </div>
+                    <!-- 본문 내용 -->
+                    <div class="article-body">
+                        <img src="images/jeju_sky.jpg">
+                        <img src="images/jeju_tree.jpg">
+                        <img src="images/tree.jpg">
+                        <p id="instagram"><a href="https://www.instagram.com/__younggeun/">더 많은 사진 보기</a></p>
+                    </div>
+                </article>
+            </section>
+            <!-- 오른쪽 메뉴 -->
+            <aside id="main-aside">
+                <!-- 첫번째 대메뉴 -->
+                <div class="aside-list">
+                    <h3>카테고리</h3>
+                    <!-- 소메뉴 -->
+                    <ul>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                    </ul>
+                </div>
+                <!-- 두번째 대메뉴 -->
+                <div class="aside-list">
+                    <h3>최근 글</h3>
+                    <!-- <소메뉴> -->
+                    <ul>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                        <li><a href="#">데이터</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        <!-- 꼬리말 -->
+        <footer id="main-footer">
+            <a href="#">Created By Younggeun Kim </a>
+        </footer>
+    </div>
+</body>
+</html>

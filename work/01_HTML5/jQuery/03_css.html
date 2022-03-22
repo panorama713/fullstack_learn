@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+
+    // $(document).ready(function(){
+    //     // 스타일을 적용합니다
+    //     $('.box').css('float', 'left');
+    //     $('.box').css('margin', 10);
+    //     $('.box').css('width', 100);
+    //     $('.box').css('height', 100);
+    //     $('.box').css('backgroundColor', 'red'); // 카멜 표기법, 단어와 단어사이를 대문자
+    // });
+
+    $(document).ready(function(){
+        let output = '';
+        for(let i=0; i<256; i++){
+            output += '<div></div>';
+        }
+        document.body.innerHTML = output;
+
+        //스타일을 적용합니다
+        $('div').css({
+            height: 2,
+            backgroundColor: function(i){
+                console.log(i);
+                return 'rgb(' + i + ',' + i + ',' + i + ')';
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>

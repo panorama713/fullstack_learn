@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0"></script>
+    <script>
+        $(function(){
+            $('#btn').click(function(){
+                $('#list').prepend("<li style='color:skyblue'>안녕하세요.</li>"); // prepend 앞쪽에 추가함
+            })
+        })
+    </script>
+</head>
+<body>
+    <ul id="list">
+        <li>항목 1</li>
+        <li>항목 2</li>
+        <li>항목 3</li>
+    </ul>
+
+    <button id="btn">앞에 항목 추가하기</button>
+</body>
+</html>
